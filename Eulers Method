@@ -1,0 +1,23 @@
+print("What is your starting x point?", end = ' ')
+xStart = float(input())
+print("What is your starting y point?", end = ' ')
+yStart = float(input())
+print("What is your ending x point?", end = ' ')
+xEnd = float(input())
+print("What is your change in x?", end = ' ')
+h = float(input())
+
+numIterations = (xEnd - xStart) / h
+
+def function(x,y): // Use this to input your function
+    return 2 * x - 3 * y + 1
+
+xList = []
+for i in range(int(numIterations+1)):
+    xList.append(xStart)
+    xStart += h
+
+for i in range(len(xList)):
+    y = yStart + h * function(xList[i], yStart)
+    yStart = y
+    print(f"Your point is ({round(xList[i], 4)} , {round(y, 8)})")
