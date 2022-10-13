@@ -10,7 +10,7 @@ h = float(input())
 numIterations = (xEnd - xStart) / h
 
 def function(x,y):
-    return 2 * x - 3 * y + 1
+    return x * y ** 2 - y/x
 
 xList = []
 for i in range(int(numIterations)+2):
